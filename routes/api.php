@@ -16,6 +16,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+Route::get('/', function () {
+    return response()->json(['message' => "Welcome to api"], 200);
+});
+
 
 Route::get('mock/user', [AuthController::class, 'mockUser']);
 Route::get('mock/wine', [AuthController::class, 'mockWine']);
