@@ -26,13 +26,13 @@ Route::get('mock/wine', [AuthController::class, 'mockWine']);
 
 Route::post('login', [AuthController::class, 'login']);
 Route::post('register', [AuthController::class, 'register']);
-
+Route::apiResource('/wines', WineController::class)->except(['update']);
 
 Route::middleware('auth:sanctum')->group(function () {
     Route::get('/logout', [AuthController::class, 'logout']);
     Route::apiResource('/users', UserController::class)->except(['update']);
     Route::post('/users/{user}', [UserController::class, 'update']);
-    Route::apiResource('/wines', WineController::class)->except(['update']);
+
     Route::post('/wines/{wine}', [WineController::class, 'update']);
     // User Wines
     Route::get('/users/{user}/wines', [UserController::class, 'usersWine',]);
