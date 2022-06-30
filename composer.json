@@ -17,10 +17,6 @@
         "mockery/mockery": "^1.4.4",
         "nunomaduro/collision": "^6.1",
         "phpunit/phpunit": "^9.5.10"
-        <<<<<<< patch-4
-
-        =======
-        >>>>>>> main
     },
     "autoload": {
         "psr-4": {
